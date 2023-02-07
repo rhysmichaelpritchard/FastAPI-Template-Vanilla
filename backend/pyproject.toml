@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = "A template for FAST API apps."
+authors = ["Rhys Pritchard <rhys.pritchard.97@gmail.com>"]
+license = "Free use for all who possess this template."
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^7.2.1"
+uvicorn = "^0.20.0"
+fastapi = "^0.89.1"
+requests = "^2.28.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
