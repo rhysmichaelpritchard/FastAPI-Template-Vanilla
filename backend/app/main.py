@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 from enum import Enum
+from logging import getLogger
+
+logger = getLogger(__name__)
 
 app = FastAPI()
 
