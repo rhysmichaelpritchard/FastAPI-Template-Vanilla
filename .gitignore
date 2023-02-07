@@ -1,2 +1,4 @@
 /backend/app/__pycache__/
+/backend/test/integration_tests/__pycache__/
+/backend/test/unit_tests/__pycache__/
 /backend/test/__pycache__/
