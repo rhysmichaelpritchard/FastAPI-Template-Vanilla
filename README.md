@@ -1,5 +1,7 @@
 # FastAPI Template
 
+This project uses poetry to manage dependencies. It also uses alembic to manage database migrations. The project is dockerized and can be run with docker-compose.
+
 ## How to use
 
 1. Clone the repository
