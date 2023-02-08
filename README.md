@@ -16,5 +16,5 @@ alternatively to test production:
 
 1. Clone the repository
 2. `cd backend` to go to the backend directory
-3. docker build -t fastapi-template-vanilla .
-4. docker run -p 8000:8000 fastapi-template-vanilla
+3. `docker build -t fastapi-template-vanilla .` to build the docker image
+4. `docker run -p 8000:8000 fastapi-template-vanilla` to run the docker image
