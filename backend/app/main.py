@@ -1,23 +1,24 @@
-from fastapi import FastAPI
-from enum import Enum
-from logging import getLogger
-
-logger = getLogger(__name__)
-
+from fastapi import FastAPI, Request
 app = FastAPI()
 
-class ModelName(str, Enum):
-    likes = "likes"
-    dislikes = "dislikes"
+import logging
+
+from enum import Enum
+class Options(str, Enum):
+    option_1 = "option_1"
+    option_2 = "option_2"
 
 @app.get("/")
 def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello World!"}
 
-@app.get('/probe/{question}')
-def get_probe_question(question: ModelName):
-    if question == ModelName.likes:
-        return {"model_name": question ,"question": "What do you like about your new car?"}
-    if question == ModelName.dislikes:
-        return {"model_name": question ,"question": "What do you dislike about your new car?"}
-    return {"model_name": question, "question": "This should not be possible?"}
+@app.get('/{option}')
+def get_probe_question(option: Options):
+
+    if option == Options.option_1:
+        return {"option": option ,"question": "You chose Option 1!"}
+
+    if option == Options.option_2:
+        return {"option": option ,"question": "You chose Option 2!"}
+
+    return {"option": option, "question": "Are you lost?"}
