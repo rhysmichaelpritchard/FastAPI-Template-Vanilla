@@ -22,5 +22,8 @@ RUN poetry install
 
 # Run your app
 COPY . /app
+
+EXPOSE 8000
+
 # CMD [ "poetry", "run", "python", "-c", "print('Hello, World!')" ]
 CMD ["sh","./run.sh"]

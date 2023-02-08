@@ -1,4 +1,4 @@
-# FastAPI Template
+# FastAPI Template Vanilla
 
 This project uses <b>poetry</b> to manage dependencies. 
 It also uses <b>alembic</b> to manage database migrations. 

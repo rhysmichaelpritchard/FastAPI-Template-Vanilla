@@ -1,11 +1,11 @@
 from app import main
 
 def test_get_probe_question_likes():
-    response = main.get_probe_question("likes")
-    assert response == {"model_name": "likes" ,"question": "What do you like about your new car?"}
-    response = main.get_probe_question("dislikes")
-    assert response == {"model_name": "dislikes" ,"question": "What do you dislike about your new car?"}
+    response = main.get_probe_question("option_1")
+    assert response == {"option": "option_1" ,"question": "You chose Option 1!"}
+    response = main.get_probe_question("option_2")
+    assert response == {"option": "option_2" ,"question": "You chose Option 2!"}
 
 def test_root():
     response = main.root()
-    assert response == {"message": "Hello World"}
+    assert response == {"message": "Hello World!"}
